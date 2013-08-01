@@ -1,0 +1,34 @@
+# vim: set ft=sh
+disable_service n-net
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+enable_service quantum
+
+# Optional, to enable tempest configuration as part of devstack
+enable_service tempest
+DATABASE_PASSWORD=demo
+RABBIT_PASSWORD=demo
+SERVICE_TOKEN=demo
+SERVICE_PASSWORD=demo
+ADMIN_PASSWORD=demo
+FLOATING_RANGE=192.168.122.192/26
+Q_USE_DEBUG_COMMAND=True
+
+# Repo forks
+NEUTRON_REPO=https://github.com/jameskyle/neutron.git
+NEUTRON_BRANCH=develop
+
+# neutron client
+NEUTRONCLIENT_REPO=https://github.com/jameskyle/python-neutronclient.git
+NEUTRONCLIENT_BRANCH=develop
+
+# Timeouts
+ACTIVE_TIMEOUT=60
+ASSOCIATE_TIMEOUT=60
+BOOT_TIMEOUT=60
+SERVICE_TIMEOUT=60
+
+DEFAULT_INSTANCE_TYPE=m1.micro
