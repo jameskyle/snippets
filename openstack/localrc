@@ -32,3 +32,10 @@ BOOT_TIMEOUT=60
 SERVICE_TIMEOUT=60
 
 DEFAULT_INSTANCE_TYPE=m1.micro
+
+# FIXES: https://bugs.launchpad.net/neutron/+bug/1206013
+OSLOCFG_REPO=https://github.com/openstack/oslo.config.git
+OSLOCFG_BRANCH=1.2.0a3
+
+# To 'reset' if you've already run stack once
+#RECLONE=yes
